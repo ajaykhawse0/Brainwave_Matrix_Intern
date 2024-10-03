@@ -1,0 +1,248 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+Cherokee:100,200,300,regular,500,600,700,800,900);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0.887) 11%, rgba(203, 138, 214, 1) 64%, rgba(0, 212, 255, 1) 100%);
+    padding: 10px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-app h1 {
+    font-weight: bolder;
+    color: black;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h1 img {
+    width: 30px;
+    margin: 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #b191913d;
+    border-radius: 30px;
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: rgb(231, 120, 9);
+    padding: 16px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(255, 150, 50);
+}
+
+ul li {
+    list-style: none;
+    font-size: 20px;
+    padding: 13px 9px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url('Icons/checkbox.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    left: 2px;
+    top: 10px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url('Icons/check.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 2;
+}
+
+#list-container li span {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: rgb(255, 252, 252);
+    background-color: rgb(255, 0, 0);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 4px 10px;
+    border-radius: 40%;
+    box-shadow: 0 2px 5px rgba(33, 30, 30, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+#list-container li span:hover {
+    background-color: rgb(40, 0, 0);
+}
+
+footer {
+    padding-top: 10%;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#inputbx {
+    font-size: 20px;
+    color: black;
+}
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 18px;
+    padding-left: 15%;
+}
+
+#priority-level {
+    border-radius: 30px;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+#priority-level option {
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.low {
+    color: green;
+}
+
+.medium {
+    color: orange;
+}
+
+.high {
+    color: red;
+}
+
+/* Responsive Styling */
+
+/* Medium screens (tablets, small laptops) */
+@media (max-width: 768px) {
+    .todo-app {
+        max-width: 400px;
+        padding: 30px 20px;
+        margin: 50px auto;
+    }
+
+    .todo-app h1 {
+        font-size: 20px;
+    }
+
+    button {
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+
+    ul li {
+        font-size: 18px;
+        padding: 10px 8px 10px 40px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 24px;
+        padding-top: 40px;
+    }
+
+    .dropdown {
+        padding-left: 10%;
+    }
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+    .todo-app {
+        max-width: 320px;
+        padding: 25px 15px;
+        margin: 30px auto;
+    }
+
+    .todo-app h1 {
+        font-size: 18px;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    ul li {
+        font-size: 16px;
+        padding: 8px 5px 8px 35px;
+    }
+
+    input {
+        font-size: 12px;
+    }
+
+    footer {
+        font-size: 20px;
+        /* padding-top: 20px; */
+    }
+
+    .dropdown {
+        padding-left: 5%;
+    }
+}
