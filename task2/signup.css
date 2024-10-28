@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 11%, rgba(148, 187, 233, 1) 99%);
+    height: 90%;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    
+}
+header button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0 5px;
+}
+
+
+.nav-button {
+    background-color:rgba(0, 0, 0, 0.753); 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.nav-button a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+
+.nav-button:hover {
+    background-color:rgba(0, 115, 255, 0.676); 
+}
+
+
+
+/* Main Styling for the Signup Form */
+#signup-form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgb(121, 181, 214);
+    background: linear-gradient(135deg, rgba(121, 181, 214, 0.9) 35%, rgba(187, 121, 214, 0.7) 90%);
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(45, 0, 105, 0.5);
+}
+
+
+h2 {
+    margin-top: 20px;
+    font-size: 36px;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Labels */
+#signup-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #0b0b0b;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Form Inputs */
+#signup-form input[type="text"],
+#signup-form input[type="email"],
+#signup-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+#signup-form input:focus {
+    outline: none;
+    border-color: #8e44ad;
+    box-shadow: 0 0 8px rgba(142, 68, 173, 0.4);
+}
+
+/* Signup Button */
+#signup-form button {
+    background-color: #8e44ad;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Arial', sans-serif;
+    border-radius: 25px;
+    display: block;
+    margin: 20px auto 0;
+    width: 50%;
+}
+
+#signup-form button:hover {
+    background-color: #663399;
+    transform: scale(1.1);
+}
+
+#signup-form button:active {
+    background-color: #9b59b6;
+    transform: scale(1);
+}
+
+footer {
+    font-size: 25px;
+    color:black;
+    text-align: center;
+    padding: 10px;
+}

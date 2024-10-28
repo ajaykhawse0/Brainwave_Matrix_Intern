@@ -1,0 +1,265 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 11%, rgba(148, 187, 233, 1) 99%);
+}
+
+/* Menu Styling */
+#menu {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+#menu ul li {
+    margin-left: 20px;
+}
+
+#menu ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 25px;
+}
+
+#menu ul li a:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+center{
+    margin-top: 25px;
+}
+center p{
+
+    margin-top: 10px;
+    color: rgb(240, 239, 239);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+#logout-button{
+    display: none;
+    position: sticky;
+    top: 0;
+    font-size: 15px;
+    font-weight: bolder;
+    padding: 10px 20px;
+    background-color: #912828;
+    border-radius: 25px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(192, 141, 141, 0.2);
+    z-index: 10;
+}
+#logout-button:hover{
+    background-color: #f30000;
+    transform: scale(1.1);
+    font-size: 18;
+}
+
+
+/* Main Container (Hidden by Default) */
+.container {
+    display: none;
+    margin-top: 60px;
+   
+    flex-direction: column;
+    justify-self: center;
+    min-height: 50vh;
+    width: 800px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(8, 7, 7, 0.1);
+}
+
+
+
+/* Login Message */
+#login-message {
+    text-align: center;
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Blog Form Styling */
+#blog-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 25px;
+    font-weight: bold;
+    
+    color: #000000;
+    font-family: 'Arial', sans-serif;
+}
+
+#blog-form input[type="text"],
+#blog-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.447);
+    font-family: 'Arial', sans-serif;
+}
+
+#blog-form button {
+    background-color: #8e44ad;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    border-radius: 20px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#blog-form button:hover{
+    transform: scale(1.05);
+    font-size: 18px;
+}
+.edit {
+    background-color: #44ad63;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    border-radius: 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.delete{
+    background-color: #c32a2a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    border-radius: 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#login-sms{color: #f30000;
+    margin-top:100px;
+    display: flex;
+    justify-self: center;
+}
+#login-sms:hover{transform: scale(1.05);}
+#blog-posts {
+    margin-top: 20px;
+}
+
+
+
+footer {
+     position:fixed;
+     top:100; 
+    bottom: 0;
+    width: 100%;
+    color: black;
+    padding: 20px;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  /* Mobile Styles */
+@media (max-width: 768px) {
+    #menu {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #menu ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        width: 90%;
+        padding: 10px;
+        margin-top: 30px;
+    }
+
+    #blog-form label {
+        font-size: 18px;
+    }
+
+    #blog-form button, .edit, .delete {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 18px;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #menu {
+        padding: 15px;
+    }
+
+    .container {
+        width: 80%;
+    }
+
+    #blog-form label {
+        font-size: 20px;
+    }
+
+    #blog-form button, .edit, .delete {
+        padding: 10px 18px;
+    }
+
+    footer {
+        font-size: 20px;
+    }
+}
+
+/* Large Screens */
+@media (min-width: 1025px) {
+    /* Maintain original styling for large screens */
+}

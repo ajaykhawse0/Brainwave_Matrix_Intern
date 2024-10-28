@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogger's Point</title>
+<link rel="icon" href="blog.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div id="menu" class="menu">
+      <a href="index.html">
+        <img src="blog.png" alt="Blog Logo" style="height: 50px; width: auto;">
+      </a>
+      <ul>
+        <li><a href="blogs.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">SignUp</a></li>
+      </ul>
+      
+
+    <button id="logout-button" >Logout</button>
+    </div>
+  </header>
+<center>
+  <h1>Welcome to the Blog Platform</h1>
+  <p>Here, you can create, edit, and manage your blog posts.</p>
+</center>
+
+<h2 id="login-sms">Login First Then You Can Create,Edit Your Blog <br>
+  If you are new here Then Sign Up.</h2>
+  <main class="container" id="main-container">
+    <form id="blog-form" >
+      <label for="title">Title</label>
+      <input type="text" id="title" required placeholder="Enter your post title">
+
+      <label for="content">Content</label>
+      <textarea id="content" required placeholder="Write your post content here"></textarea>
+
+      <button type="submit">Create Post</button>
+    </form>
+
+    <section id="blog-posts"></section>
+  </main>
+
+  <footer>
+    <p>&copy;2024 Blogger's Point Created By Ajay Khawse</p>
+  </footer>
+  <script src="scripts.js"></script>
+</body>
+</html>
